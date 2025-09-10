@@ -1,0 +1,447 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 10px;
+    z-index: 1000;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #000;
+
+}
+.background-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.main-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(128, 0, 128, 0.2) 0%, 
+        rgba(0, 0, 0, 1) 40%, 
+        rgba(0, 0, 255, 0.2) 100%
+    );
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 1200px;
+    padding: 2rem;
+    background: rgba(20, 20, 40, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.ms-text {
+    width: 400px;
+}
+
+.title-ms {
+    z-index: 3;
+}
+
+.ms-text .art{
+    background: linear-gradient(90deg, #bf00e6, #d456ce, #5a03e6);
+     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.ms-text p {
+    color: #8d8d8d;
+}
+
+.ms-text .disk {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.blob-top-left,
+.blob-bottom-right {
+    position: absolute;
+    width: 384px;
+    height: 384px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 2;
+}
+
+.blob-top-left {
+    top: -25%;
+    left: -25%;
+    background: rgba(128, 0, 128, 0.1);
+}
+
+.blob-bottom-right {
+    bottom: -25%;
+    right: -25%;
+    background: rgba(0, 0, 255, 0.1);
+}
+
+.radial-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(
+        circle,
+        rgba(128, 0, 128, 0.05) 0%,
+        transparent 70%
+    );
+    z-index: 2;
+}
+
+.menu {
+    display: flex; 
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    max-width: 1200px;
+    height: 56px;
+    z-index: 3;
+    padding: 2rem;
+    background: rgba(20, 20, 40, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+}
+
+.menu .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu-list a:hover {
+    color: #a066ff;
+}
+
+.ms-button {
+    display: flex;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.ms-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.ms-button .button {
+    background: #6a0dad;
+    color: white;
+    gap: 8px;
+}
+
+.ms-button .button:hover {
+    background: #8e3edb;
+}
+
+.ms-button .button-lm {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 13px;
+}
+
+.ms-button .button-lm:hover {
+    background: white;
+    color: black;
+}
+
+.play-btn {
+    width: 20px;
+    height: 20px;
+}
+
+
+.model-card-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    align-items: start;
+}
+.model-card-photo img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    }
+
+.card-text {
+    text-align: left;
+    margin-top: 0.8rem;
+}
+
+.hello-sc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 40px;
+}
+
+.card-text strong {font-size: 20px;}
+.card-text p {
+    color: #8d8d8d;
+}
+
+.last-update {
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.statistic {
+    display: flex;
+}
+
+.statistic .models{
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+}
+
+.statistic .models p {
+    color: #8d8d8d;
+}
+
+.statistic .models b {
+    font-weight: 100;
+    
+}
+
+.models-card {
+    z-index: 3;
+    display: flex;
+    padding: 150px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.models-card .title-cards-sections {
+    position: absolute;
+    left: 400px;
+}
+
+.models-card .title-cards-sections b {font-size: 30px;}
+.models-card .title-cards-sections p {color: #8d8d8d; margin-top: 20px;}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    z-index: 3;    
+}
+
+.card {
+    position: relative;
+    max-width: 300px;
+    padding: 2rem;
+    background: rgba(20, 20, 40, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.card b {
+    font-size: 1.3rem;
+    color: #f0f0ff; 
+    margin-bottom: 8px;
+    display: block;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card p {
+    color: #c0c0c0; 
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.card .las-upd {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.top-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-list-title {
+    z-index: 3;
+    color: #ccc;
+    font-size: 60px;
+    padding: 90px;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 20, 40, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+        
+.artist-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+        
+.artist-card h2 {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #fff;
+}
+        
+.artist-card b {
+    color: #a0a0f0;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+        
+.artist-card p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+
+.about-site {
+    color: #5a03e6;
+    margin: 90px;
+    padding: 90px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 1200px;
+    padding: 2rem;
+    background: rgba(20, 20, 40, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.about-site p {padding: 20px;}
+
+.about-site b{
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    padding: 90px;
+}
+
